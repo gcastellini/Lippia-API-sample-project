@@ -8,12 +8,12 @@ public class ErrorResponse {
         return message;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
     public Integer getCode() {
         return code;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public void setCode(Integer code) {
