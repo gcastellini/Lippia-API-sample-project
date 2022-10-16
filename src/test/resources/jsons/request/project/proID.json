@@ -4,5 +4,5 @@
     "Content-Type": "application/json",
     "X-Api-Key": "{{api-key}}"
   },
-  "endpoint": "/workspaces/633f5b7689bf9c24493ee39d/projects/"
+  "endpoint": "/workspaces/633f5b7689bf9c24493ee39d/projects/6349b42eac11fd230b4f2dd4"
 }
