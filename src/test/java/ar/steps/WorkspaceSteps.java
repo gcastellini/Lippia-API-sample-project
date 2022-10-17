@@ -10,6 +10,7 @@ import com.crowdar.core.PageSteps;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.testng.Assert;
 import services.BaseService;
 import services.ProjectIDService;
 import services.ProjectService;
@@ -36,19 +37,23 @@ public class WorkspaceSteps extends PageSteps {
 
     @And("^Tengo el ID de un proyecto (.*)$")
     public void idProj(String id){
-        ProjectService.ID.set(id);
+        BaseService.ID.set(id);
     }
 
     @Given("El ID de un proyecto (.*)$")
     public void idProject(String id){
       ProjectResponse[] idProj = (ProjectResponse[]) APIManager.getLastResponse().getResponse();
-      for (int i=0;i < idProj.length;i++){
-          if(idProj[i].getId().equals(id)){
-              ProjectIDService.ID.set(id);
-          }
+   //   for (int i=0;i < idProj.length;i++){
+   //       if(idProj[i].getId().equals(id)){
+   //     BaseService.ID.set(id);
+   //       }
+      Assert.assertTrue(idProj[0].getId().equals(id),"El id no es el esperado");
+      BaseService.ID.set(id);
+
+
       }
 
-    }
+
 
     @And("un nombre '(.*)'")
     public void unNombreName(String name) {

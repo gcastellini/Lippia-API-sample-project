@@ -14,5 +14,5 @@
     "billable": "true",
     "archived": "true"
   },
-  "endpoint": "/workspaces/633f5b7689bf9c24493ee39d/projects/{{id}}"
+  "endpoint": "/workspaces/633f5b7689bf9c24493ee39d/projects/{{id_project}}"
 }

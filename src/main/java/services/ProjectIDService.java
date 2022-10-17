@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class ProjectIDService extends BaseService {
     public static Response get(String jsonName) {
-        return get(jsonName, ProjectResponse[].class, setParams());
+        return get(jsonName, ProjectResponse.class, setParams());
     }
 
     public static Response put(String jsonName) {
@@ -19,6 +19,7 @@ public class ProjectIDService extends BaseService {
     private static Map<String, String> setParams() {
         Map<String, String> params = new HashMap<>();
         params.put("api-key", API_KEY.get());
+        params.put("id_project",ID.get());
         return params;
 
     }
